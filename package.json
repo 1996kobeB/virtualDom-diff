@@ -1,0 +1,29 @@
+{
+  "name": "virtualdom-diff",
+  "version": "1.0.0",
+  "description": "render函数--->虚拟dom&amp;diif",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsy1996123/virtualDom-diff.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsy1996123/virtualDom-diff/issues"
+  },
+  "homepage": "https://github.com/lsy1996123/virtualDom-diff#readme",
+  "dependencies": {
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  }
+}

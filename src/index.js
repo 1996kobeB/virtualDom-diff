@@ -26,8 +26,9 @@ const vDom2 = createElement('ul', { class: 'list-wrap',
   createElement('div',{class: 'text','data-index': 2 },['第三个列表项'])
 ])
 // render函数-->虚拟dom
-const rdom1 = render(vDom1)
+// const rdom1 = render(vDom1)
 // 将虚拟dom渲染成真实dom
-renderDom(rdom1, document.getElementById('app'))
+// renderDom(rdom1, document.getElementById('app'))
 //domDiff
-domDiff(oldVDom,newVDom)
+const p = domDiff(vDom1,vDom2)
+console.log(p)

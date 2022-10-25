@@ -1,5 +1,5 @@
 import { createElement,render,renderDom } from './creatElement'
-
+import { domDiff } from './diff'
 // 创建虚拟dom
 const vDom1 = createElement('ul', { class: 'list',
   style: "width: 300px;height: 300px;background-color: orange"
@@ -25,5 +25,9 @@ const vDom2 = createElement('ul', { class: 'list-wrap',
   [createElement('p',{class: 'text'},[])]),
   createElement('div',{class: 'text','data-index': 2 },['第三个列表项'])
 ])
-// const rdom = render(vDom)
-renderDom(rdom,document.getElementById('app'))
+// render函数-->虚拟dom
+const rdom1 = render(vDom1)
+// 将虚拟dom渲染成真实dom
+renderDom(rdom1, document.getElementById('app'))
+//domDiff
+domDiff(oldVDom,newVDom)

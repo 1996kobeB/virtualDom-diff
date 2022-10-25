@@ -60,5 +60,6 @@ function renderDom(el,target){
 export {
   createElement,
   render,
-  renderDom
+  renderDom,
+  setAttr
 }

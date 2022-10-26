@@ -12,6 +12,7 @@ function domDiff(oldVDom, newVDom) {
 }
 
 function diffWalk(oldVDom, newVDom, index, patches) {
+  // 该节点的补丁
   let patchList = []
   if (!newVDom) {
     // 新节点被删除(无子节点)
@@ -20,6 +21,7 @@ function diffWalk(oldVDom, newVDom, index, patches) {
       index
     })
     if(oldVDom.children) {
+      // 被删除子节点的孩子不遍历
       oldVDom.children = []
     }
   }else if(isString(newVDom)&&isString(oldVDom)){

@@ -1,12 +1,14 @@
 import {REMOVE,TEXT,REPLACE,ATTR} from './diffTypes'
-  // 遍历dom的id
-  let diffIndex = 0
+// 遍历dom的index
+let diffIndex = 0
+
+// diff算法
 function domDiff(oldVDom, newVDom) {
   // 返回的补丁
   const patches = {}
-  // 初始的树id
+  // 初始的树index
   let index = 0
-  // 遍历函数
+  // 递归函数
   diffWalk(oldVDom, newVDom, index, patches)
   return patches
 }
@@ -56,10 +58,11 @@ function diffWalk(oldVDom, newVDom, index, patches) {
   }
 }
 
-
+// 字符串判断
 function isString(str){
   return typeof str === 'string'
 }
+
 // 属性修改
 function diffAttr(oldProps,newProps){
   // 目的：生成一个dom属性改变部分的对象

@@ -33,7 +33,8 @@ console.log(vDom1)// 虚拟节点
 // 虚拟dom-->真实dom
 const rdom = render(vDom1)
 // 获取补丁
-const p = domDiff(vDom1,vDom2)
+const p = domDiff(vDom1, vDom2)
+console.log(p) // 补丁
 // 打补丁
 const patchDom = doPatch(rdom,p)
 // 将打过补丁的真实dom挂载到app下

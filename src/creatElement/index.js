@@ -53,7 +53,7 @@ function setAttr(dom,key,value){
   }
 }
 
-// 渲染dom
+// 渲染dom，在入口文件调用该方法，将渲染出的真实节点挂载至app
 function renderDom(el,target){
   target.appendChild(el)
 }
